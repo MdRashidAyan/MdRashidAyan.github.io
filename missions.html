@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASTRONIUS - Space Missions</title>
+
+    <style>
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #03050f;
+            color: white;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background-image:
+                radial-gradient(circle, white 1px, transparent 1px),
+                radial-gradient(circle, #7d8cff 1px, transparent 1px);
+            background-size: 80px 80px, 130px 130px;
+            opacity: .3;
+            z-index: -1;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(3,5,15,.8);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(255,255,255,.08);
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 27px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .logo span { color: #8064ff; }
+
+        nav a {
+            color: #d8d8e5;
+            text-decoration: none;
+            margin-left: 25px;
+        }
+
+        nav a:hover { color: #967cff; }
+
+        main {
+            padding: 150px 7% 100px;
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .title h1 {
+            font-size: 65px;
+            margin: 0 0 20px;
+            background: linear-gradient(90deg,#8064ff,#44c8ff,#c080ff);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .title p {
+            color: #aeb0c2;
+            font-size: 19px;
+        }
+
+        .timeline {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .mission {
+            padding: 35px;
+            margin-bottom: 25px;
+            border-radius: 22px;
+            background: rgba(255,255,255,.04);
+            border: 1px solid rgba(255,255,255,.08);
+            transition: .3s;
+        }
+
+        .mission:hover {
+            transform: translateX(8px);
+            border-color: #7657ff;
+        }
+
+        .mission h2 {
+            margin-top: 0;
+            font-size: 28px;
+        }
+
+        .mission p {
+            color: #9da0b3;
+            line-height: 1.7;
+        }
+
+        .year {
+            color: #9b85ff;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: #090b1b;
+            color: #777b91;
+        }
+
+        @media(max-width:800px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px 7px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">ASTR<span>NIOUS</span></div>
+
+    <nav>
+        <a href="astronious.html">Home</a>
+        <a href="planet.html">Planets</a>
+        <a href="missions.html">Missions</a>
+        <a href="stars.html">Stars</a>
+        <a href="galaxies.html">Galaxies</a>
+        <a href="facts.html">Facts</a>
+        <a href="about.html">About</a>
+    </nav>
+</header>
+
+<main>
+
+    <div class="title">
+        <h1>🚀 Missions</h1>
+        <p>Humanity's journey into the unknown.</p>
+    </div>
+
+    <div class="timeline">
+
+        <div class="mission">
+            <div class="year">1969</div>
+            <h2>🌙 Apollo 11</h2>
+            <p>
+                Apollo 11 carried humans to the Moon and marked
+                one of the most famous moments in space exploration.
+            </p>
+        </div>
+
+        <div class="mission">
+            <div class="year">1977</div>
+            <h2>🛰️ Voyager</h2>
+            <p>
+                Voyager spacecraft began journeys that would take
+                them far beyond the outer planets.
+            </p>
+        </div>
+
+        <div class="mission">
+            <div class="year">1990</div>
+            <h2>🔭 Hubble</h2>
+            <p>
+                The Hubble Space Telescope transformed our view
+                of distant stars, galaxies and nebulae.
+            </p>
+        </div>
+
+        <div class="mission">
+            <div class="year">2021</div>
+            <h2>🔭 James Webb</h2>
+            <p>
+                The James Webb Space Telescope opened a new window
+                into the distant universe.
+            </p>
+        </div>
+
+        <div class="mission">
+            <div class="year">Future</div>
+            <h2>🚀 What's Next?</h2>
+            <p>
+                New spacecraft and observatories will continue
+                exploring the Moon, Mars and deep space.
+            </p>
+        </div>
+
+    </div>
+
+</main>
+
+<footer>
+    <div class="logo">ASTR<span>NIOUS</span></div>
+    <p>Look beyond the horizon. 🚀</p>
+</footer>
+
+</body>
+</html>

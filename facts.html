@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASTRONIUS - Space Facts</title>
+
+    <style>
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #03050f;
+            color: white;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background-image:
+                radial-gradient(circle, white 1px, transparent 1px),
+                radial-gradient(circle, #7d8cff 1px, transparent 1px);
+            background-size: 80px 80px, 150px 150px;
+            opacity: .3;
+            z-index: -1;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(3,5,15,.8);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(255,255,255,.08);
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 27px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .logo span { color: #8064ff; }
+
+        nav a {
+            color: #d8d8e5;
+            text-decoration: none;
+            margin-left: 25px;
+        }
+
+        nav a:hover { color: #967cff; }
+
+        main {
+            padding: 150px 7% 100px;
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .title h1 {
+            font-size: 65px;
+            margin: 0 0 20px;
+            background: linear-gradient(90deg,#8064ff,#44c8ff,#c080ff);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .title p {
+            color: #aeb0c2;
+            font-size: 19px;
+        }
+
+        .facts {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .fact {
+            margin-bottom: 25px;
+            padding: 30px;
+            border-radius: 22px;
+            background: rgba(255,255,255,.04);
+            border: 1px solid rgba(255,255,255,.08);
+            transition: .3s;
+        }
+
+        .fact:hover {
+            border-color: #7657ff;
+            transform: translateX(7px);
+        }
+
+        .fact h2 {
+            margin-top: 0;
+        }
+
+        .fact p {
+            color: #9da0b3;
+            line-height: 1.8;
+            font-size: 17px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: #090b1b;
+            color: #777b91;
+        }
+
+        @media(max-width:800px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px 7px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">ASTR<span>NIOUS</span></div>
+
+    <nav>
+        <a href="astronious.html">Home</a>
+        <a href="planet.html">Planets</a>
+        <a href="missions.html">Missions</a>
+        <a href="stars.html">Stars</a>
+        <a href="galaxies.html">Galaxies</a>
+        <a href="facts.html">Facts</a>
+        <a href="about.html">About</a>
+    </nav>
+</header>
+
+<main>
+
+    <div class="title">
+        <h1>🔭 Space Facts</h1>
+        <p>Little pieces of knowledge from our enormous universe.</p>
+    </div>
+
+    <div class="facts">
+
+        <div class="fact">
+            <h2>☀️ The Sun is a Star</h2>
+            <p>
+                The Sun is the star at the center of our Solar System.
+                Its energy makes life on Earth possible.
+            </p>
+        </div>
+
+        <div class="fact">
+            <h2>🌍 Earth is Moving</h2>
+            <p>
+                Earth rotates on its axis while also traveling
+                around the Sun.
+            </p>
+        </div>
+
+        <div class="fact">
+            <h2>🌙 The Moon is Earth's Natural Satellite</h2>
+            <p>
+                The Moon orbits Earth and strongly influences
+                ocean tides.
+            </p>
+        </div>
+
+        <div class="fact">
+            <h2>💡 Light is Extremely Fast</h2>
+            <p>
+                Light travels through empty space at about
+                300,000 kilometers per second.
+            </p>
+        </div>
+
+        <div class="fact">
+            <h2>🌌 The Universe is Huge</h2>
+            <p>
+                Astronomers observe enormous numbers of galaxies,
+                each containing huge numbers of stars.
+            </p>
+        </div>
+
+        <div class="fact">
+            <h2>🕳️ Black Holes Have Powerful Gravity</h2>
+            <p>
+                A black hole is a region of spacetime where gravity
+                is so strong that light cannot escape from within
+                its event horizon.
+            </p>
+        </div>
+
+    </div>
+
+</main>
+
+<footer>
+    <div class="logo">ASTR<span>NIOUS</span></div>
+    <p>Stay curious. Keep looking up. 🔭</p>
+</footer>
+
+</body>
+</html>

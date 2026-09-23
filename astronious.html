@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASTRONIUS - Explore the Universe</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #03050f;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* STAR BACKGROUND */
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background-image:
+                radial-gradient(circle, white 1px, transparent 1px),
+                radial-gradient(circle, #7d8cff 1px, transparent 1px),
+                radial-gradient(circle, #b77cff 1px, transparent 1px);
+            background-size: 80px 80px, 130px 130px, 190px 190px;
+            background-position: 0 0, 40px 60px, 90px 20px;
+            opacity: 0.3;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        /* HEADER */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(3, 5, 15, 0.75);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 27px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-decoration: none;
+            color: white;
+        }
+
+        .logo span {
+            color: #8064ff;
+        }
+
+        nav a {
+            color: #d8d8e5;
+            text-decoration: none;
+            margin-left: 25px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #967cff;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 140px 20px 80px;
+            background: radial-gradient(
+                circle at center,
+                rgba(92,70,255,0.18),
+                transparent 50%
+            );
+        }
+
+        .hero-content {
+            max-width: 900px;
+        }
+
+        .small-title {
+            display: inline-block;
+            padding: 9px 18px;
+            border: 1px solid #4c4380;
+            border-radius: 30px;
+            color: #b8aaff;
+            background: rgba(100,70,255,0.08);
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            font-size: clamp(60px, 10vw, 110px);
+            line-height: 0.95;
+            margin: 0 0 30px;
+        }
+
+        .gradient {
+            background: linear-gradient(
+                90deg,
+                #8064ff,
+                #44c8ff,
+                #c080ff
+            );
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .hero p {
+            color: #aeb0c2;
+            font-size: 20px;
+            line-height: 1.7;
+            max-width: 650px;
+            margin: auto;
+        }
+
+        /* BUTTON */
+        .button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 28px;
+            background: #7657ff;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            transform: translateY(-4px);
+            background: #947cff;
+            box-shadow: 0 10px 35px rgba(118,87,255,0.3);
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 100px 7%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .section-title h2 {
+            font-size: 42px;
+            margin-bottom: 12px;
+        }
+
+        .section-title p {
+            color: #9093a8;
+        }
+
+        /* CARDS */
+        .cards {
+            max-width: 1250px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            width: 280px;
+            padding: 30px;
+            border-radius: 22px;
+            background: rgba(255,255,255,0.035);
+            border: 1px solid rgba(255,255,255,0.08);
+            transition: 0.35s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: #7657ff;
+            background: rgba(100,75,255,0.08);
+        }
+
+        .icon {
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            font-size: 26px;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #9da0b3;
+            line-height: 1.7;
+        }
+
+        /* FOOTER */
+        footer {
+            padding: 45px 20px;
+            text-align: center;
+            background: #090b1b;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            color: #777b91;
+        }
+
+        /* MOBILE */
+        @media (max-width: 800px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                text-align: center;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px 8px;
+                font-size: 14px;
+            }
+
+            .card {
+                width: 100%;
+                max-width: 350px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <a href="astronious.html" class="logo">
+        ASTR<span>NIOUS</span>
+    </a>
+
+    <nav>
+        <a href="astronious.html">Home</a>
+        <a href="planet.html">Planets</a>
+        <a href="missions.html">Missions</a>
+        <a href="stars.html">Stars</a>
+        <a href="galaxies.html">Galaxies</a>
+        <a href="facts.html">Facts</a>
+        <a href="about.html">About</a>
+        <a href="code-lab.html">Code Lab</a>
+    </nav>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="small-title">
+            ✦ Welcome to ASTRONIUS
+        </div>
+
+        <h1>
+            Explore the
+            <span class="gradient">Universe.</span>
+        </h1>
+
+        <p>
+            Journey beyond Earth and discover planets,
+            stars, galaxies and the mysteries of deep space.
+        </p>
+
+        <a href="planet.html" class="button">
+            Begin Your Journey 🚀
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= EXPLORE SPACE ================= -->
+
+<section>
+
+    <div class="section-title">
+
+        <h2>🌌 Explore Space</h2>
+
+        <p>
+            There is an entire universe waiting to be discovered.
+        </p>
+
+    </div>
+
+
+    <div class="cards">
+
+        <!-- PLANETS -->
+
+        <div class="card">
+
+            <div class="icon">🪐</div>
+
+            <h3>Planets</h3>
+
+            <p>
+                Discover fascinating worlds across our Solar System
+                and beyond.
+            </p>
+
+            <a href="planet.html" class="button">
+                Explore
+            </a>
+
+        </div>
+
+
+        <!-- STARS -->
+
+        <div class="card">
+
+            <div class="icon">⭐</div>
+
+            <h3>Stars</h3>
+
+            <p>
+                Learn about enormous stars that illuminate
+                the universe.
+            </p>
+
+            <a href="stars.html" class="button">
+                Explore
+            </a>
+
+        </div>
+
+
+        <!-- GALAXIES -->
+
+        <div class="card">
+
+            <div class="icon">🌌</div>
+
+            <h3>Galaxies</h3>
+
+            <p>
+                Explore massive collections of stars,
+                planets, gas and dust.
+            </p>
+
+            <a href="galaxies.html" class="button">
+                Explore
+            </a>
+
+        </div>
+
+
+        <!-- CODE LAB -->
+
+        <div class="card">
+
+            <div class="icon">💻</div>
+
+            <h3>Code Lab</h3>
+
+            <p>
+                Discover the technology and programming
+                behind space exploration.
+            </p>
+
+            <a href="code-lab.html" class="button">
+                Enter Lab
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="logo">
+        ASTR<span>NIOUS</span>
+    </div>
+
+    <p>
+        Look up. Dream bigger. Explore farther. 🌌
+    </p>
+
+    <p>
+        © 2026 ASTRONIUS
+    </p>
+
+</footer>
+
+
+</body>
+</html>

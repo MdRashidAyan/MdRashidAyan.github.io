@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASTRONIUS - Planets</title>
+
+    <style>
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #03050f;
+            color: white;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background-image:
+                radial-gradient(circle, white 1px, transparent 1px),
+                radial-gradient(circle, #7d8cff 1px, transparent 1px);
+            background-size: 80px 80px, 130px 130px;
+            opacity: .3;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(3,5,15,.8);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(255,255,255,.08);
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 27px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .logo span { color: #8064ff; }
+
+        nav a {
+            color: #d8d8e5;
+            text-decoration: none;
+            margin-left: 25px;
+            transition: .3s;
+        }
+
+        nav a:hover { color: #967cff; }
+
+        main {
+            padding: 150px 7% 100px;
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .title h1 {
+            font-size: 65px;
+            margin: 0 0 20px;
+            background: linear-gradient(90deg,#8064ff,#44c8ff,#c080ff);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .title p {
+            color: #aeb0c2;
+            font-size: 19px;
+        }
+
+        .cards {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            width: 250px;
+            padding: 30px;
+            border-radius: 22px;
+            background: rgba(255,255,255,.04);
+            border: 1px solid rgba(255,255,255,.08);
+            transition: .3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: #7657ff;
+        }
+
+        .planet {
+            font-size: 65px;
+        }
+
+        .card h2 {
+            font-size: 25px;
+        }
+
+        .card p {
+            color: #9da0b3;
+            line-height: 1.7;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: #090b1b;
+            color: #777b91;
+        }
+
+        @media(max-width:800px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px 7px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">ASTR<span>NIOUS</span></div>
+
+    <nav>
+        <a href="astronious.html">Home</a>
+        <a href="planet.html">Planets</a>
+        <a href="missions.html">Missions</a>
+        <a href="stars.html">Stars</a>
+        <a href="galaxies.html">Galaxies</a>
+        <a href="facts.html">Facts</a>
+        <a href="about.html">About</a>
+    </nav>
+</header>
+
+<main>
+
+    <div class="title">
+        <h1>🪐 Planets</h1>
+        <p>Meet the fascinating worlds of our Solar System.</p>
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="planet">☿️</div>
+            <h2>Mercury</h2>
+            <p>The smallest planet and the closest planet to the Sun.</p>
+        </div>
+
+        <div class="card">
+            <div class="planet">♀️</div>
+            <h2>Venus</h2>
+            <p>A hot world covered by a thick atmosphere.</p>
+        </div>
+
+        <div class="card">
+            <div class="planet">🌍</div>
+            <h2>Earth</h2>
+            <p>Our home planet and the only known world with life.</p>
+        </div>
+
+        <div class="card">
+            <div class="planet">🔴</div>
+            <h2>Mars</h2>
+            <p>The Red Planet, famous for its dusty surface.</p>
+        </div>
+
+        <div class="card">
+            <div class="planet">🟠</div>
+            <h2>Jupiter</h2>
+            <p>The largest planet in our Solar System.</p>
+        </div>
+
+        <div class="card">
+            <div class="planet">🪐</div>
+            <h2>Saturn</h2>
+            <p>A giant planet famous for its spectacular rings.</p>
+        </div>
+
+        <div class="card">
+            <div class="planet">🔵</div>
+            <h2>Uranus</h2>
+            <p>An icy giant that rotates almost on its side.</p>
+        </div>
+
+        <div class="card">
+            <div class="planet">🔵</div>
+            <h2>Neptune</h2>
+            <p>A distant blue world with incredibly strong winds.</p>
+        </div>
+
+    </div>
+
+</main>
+
+<footer>
+    <div class="logo">ASTR<span>NIOUS</span></div>
+    <p>Explore farther. 🌌</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>ASTRONIUS - Code Lab</title>
+
+    <link
+        rel="stylesheet"
+        href="css/code-lab.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <a href="astronious.html" class="logo">
+        ASTR<span>NIOUS</span>
+    </a>
+
+    <nav>
+
+        <a href="astronious.html">
+            Home
+        </a>
+
+        <a href="planet.html">
+            Planets
+        </a>
+
+        <a href="missions.html">
+            Missions
+        </a>
+
+        <a href="stars.html">
+            Stars
+        </a>
+
+        <a href="galaxies.html">
+            Galaxies
+        </a>
+
+        <a href="facts.html">
+            Facts
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a href="code-lab.html">
+            Code Lab
+        </a>
+
+    </nav>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="small-title">
+            ✦ ASTRONIUS ENGINEERING
+        </div>
+
+        <h1>
+            CODE
+            <span class="gradient">
+                LAB.
+            </span>
+        </h1>
+
+        <p>
+            Explore the technology and programming
+            used to power the future of space exploration.
+        </p>
+
+        <div class="language-pills">
+
+            <span>C++</span>
+            <span>Java</span>
+            <span>Node.js</span>
+            <span>PHP</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CODE SECTION ================= -->
+
+<section class="code-section">
+
+    <div class="section-title">
+
+        <h2>🚀 Space Engineering</h2>
+
+        <p>
+            Real programming languages can help us
+            model missions, calculate orbits and build
+            space technology.
+        </p>
+
+    </div>
+
+
+    <div class="code-grid">
+
+
+        <!-- C++ -->
+
+        <div class="code-card">
+
+            <div class="code-card-header">
+
+                <div class="code-icon">
+                    ⚙️
+                </div>
+
+                <div>
+                    <h3>C++</h3>
+
+                    <span>
+                        Orbital Physics
+                    </span>
+                </div>
+
+            </div>
+
+
+            <pre><code>#include &lt;iostream&gt;
+#include &lt;cmath&gt;
+
+int main() {
+
+    double G = 6.67430e-11;
+    double M = 5.972e24;
+    double r = 6.771e6;
+
+    double velocity =
+        sqrt(G * M / r);
+
+    std::cout
+        &lt;&lt; "Orbital velocity: "
+        &lt;&lt; velocity
+        &lt;&lt; " m/s";
+
+    return 0;
+}</code></pre>
+
+        </div>
+
+
+        <!-- JAVA -->
+
+        <div class="code-card">
+
+            <div class="code-card-header">
+
+                <div class="code-icon">
+                    ☕
+                </div>
+
+                <div>
+                    <h3>Java</h3>
+
+                    <span>
+                        Mission Calculator
+                    </span>
+                </div>
+
+            </div>
+
+
+            <pre><code>public class Mission {
+
+    public static void main(String[] args) {
+
+        int missionDays = 180;
+
+        System.out.println(
+            "Mission duration: "
+            + missionDays
+            + " days"
+        );
+    }
+}</code></pre>
+
+        </div>
+
+
+        <!-- NODE JS -->
+
+        <div class="code-card">
+
+            <div class="code-card-header">
+
+                <div class="code-icon">
+                    🟢
+                </div>
+
+                <div>
+                    <h3>Node.js</h3>
+
+                    <span>
+                        Space Data Server
+                    </span>
+                </div>
+
+            </div>
+
+
+            <pre><code>const http = require("http");
+
+const server = http.createServer(
+    (req, res) => {
+
+        res.writeHead(200, {
+            "Content-Type":
+            "application/json"
+        });
+
+        res.end(JSON.stringify({
+            mission: "ASTRONIUS-1",
+            status: "ACTIVE",
+            destination: "Mars"
+        }));
+    }
+);
+
+server.listen(3000);</code></pre>
+
+        </div>
+
+
+        <!-- PHP -->
+
+        <div class="code-card">
+
+            <div class="code-card-header">
+
+                <div class="code-icon">
+                    🐘
+                </div>
+
+                <div>
+                    <h3>PHP</h3>
+
+                    <span>
+                        Mission API
+                    </span>
+                </div>
+
+            </div>
+
+
+            <pre><code>&lt;?php
+
+$mission = [
+    "name" =&gt; "ASTRONIUS-1",
+    "destination" =&gt; "Mars",
+    "status" =&gt; "Active"
+];
+
+header(
+    "Content-Type: application/json"
+);
+
+echo json_encode($mission);
+
+?&gt;</code></pre>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= TERMINAL ================= -->
+
+<section class="terminal-section">
+
+    <div class="section-title">
+
+        <h2>🛰️ Mission Simulator</h2>
+
+        <p>
+            Start the ASTRONIUS engineering simulation.
+        </p>
+
+    </div>
+
+
+    <div class="terminal">
+
+        <div class="terminal-top">
+
+            <span class="terminal-dot"></span>
+            <span class="terminal-dot"></span>
+            <span class="terminal-dot"></span>
+
+            <span class="terminal-title">
+                ASTRONIUS TERMINAL
+            </span>
+
+        </div>
+
+
+        <div
+            id="terminalOutput"
+            class="terminal-output"
+        >
+            &gt; ASTRONIUS CODE LAB READY ✓
+        </div>
+
+
+        <button
+            id="launchBtn"
+            class="launch-button"
+        >
+            🚀 Run Mission Simulation
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <a href="astronious.html" class="logo">
+        ASTR<span>NIOUS</span>
+    </a>
+
+    <p>
+        Engineering the future of space exploration. 🌌
+    </p>
+
+    <p>
+        © 2026 ASTRONIUS
+    </p>
+
+</footer>
+
+
+<script src="js/code-lab.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASTRONIUS - About</title>
+
+    <style>
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #03050f;
+            color: white;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background-image:
+                radial-gradient(circle, white 1px, transparent 1px),
+                radial-gradient(circle, #7d8cff 1px, transparent 1px);
+            background-size: 80px 80px, 150px 150px;
+            opacity: .3;
+            z-index: -1;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(3,5,15,.8);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(255,255,255,.08);
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 27px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .logo span { color: #8064ff; }
+
+        nav a {
+            color: #d8d8e5;
+            text-decoration: none;
+            margin-left: 25px;
+        }
+
+        nav a:hover { color: #967cff; }
+
+        main {
+            min-height: 90vh;
+            padding: 170px 7% 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .about {
+            max-width: 850px;
+            text-align: center;
+            padding: 60px 40px;
+            border-radius: 30px;
+            background: rgba(255,255,255,.04);
+            border: 1px solid rgba(255,255,255,.08);
+        }
+
+        .about h1 {
+            font-size: 65px;
+            margin-top: 0;
+            background: linear-gradient(90deg,#8064ff,#44c8ff,#c080ff);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .about h2 {
+            font-size: 30px;
+        }
+
+        .about p {
+            color: #a6a8b9;
+            font-size: 18px;
+            line-height: 1.9;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 15px 28px;
+            background: #7657ff;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: .3s;
+        }
+
+        .button:hover {
+            transform: translateY(-4px);
+            background: #947cff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: #090b1b;
+            color: #777b91;
+        }
+
+        @media(max-width:800px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px 7px;
+            }
+
+            .about h1 {
+                font-size: 48px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">ASTR<span>NIOUS</span></div>
+
+    <nav>
+        <a href="astronious.html">Home</a>
+        <a href="planet.html">Planets</a>
+        <a href="missions.html">Missions</a>
+        <a href="stars.html">Stars</a>
+        <a href="galaxies.html">Galaxies</a>
+        <a href="facts.html">Facts</a>
+        <a href="about.html">About</a>
+    </nav>
+</header>
+
+<main>
+
+    <div class="about">
+
+        <h1>🌠 ASTRONIUS</h1>
+
+        <h2>Explore. Discover. Imagine.</h2>
+
+        <p>
+            ASTRONIUS is a space exploration website created
+            for curious minds who want to discover the universe.
+        </p>
+
+        <p>
+            From planets and stars to distant galaxies and
+            incredible space missions, ASTRONIUS brings the
+            wonders of space together in one place.
+        </p>
+
+        <p>
+            The universe is enormous, mysterious and full of
+            questions. ASTRONIUS is here to help you explore it.
+        </p>
+
+        <a href="astronious.html" class="button">
+            Return to Home 🚀
+        </a>
+
+    </div>
+
+</main>
+
+<footer>
+    <div class="logo">ASTR<span>NIOUS</span></div>
+    <p>Look up. Dream bigger. Explore farther. 🌌</p>
+    <p>© 2026 ASTRONIUS</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,990 @@
+/* =========================================================
+   ASTRONIUS — CODE LAB
+   Space-themed stylesheet
+========================================================= */
+
+
+/* =========================================================
+   GLOBAL RESET
+========================================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =========================================================
+   BODY
+========================================================= */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 50% -20%,
+            #16275a 0%,
+            #080d20 35%,
+            #02040b 75%
+        );
+
+    color: #eef3ff;
+
+    min-height: 100vh;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   STAR FIELD
+========================================================= */
+
+.stars {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: -1;
+
+    pointer-events: none;
+
+    background-image:
+
+        radial-gradient(
+            circle,
+            rgba(255,255,255,0.9) 1px,
+            transparent 1.5px
+        ),
+
+        radial-gradient(
+            circle,
+            rgba(130,160,255,0.7) 1px,
+            transparent 1.5px
+        ),
+
+        radial-gradient(
+            circle,
+            rgba(255,255,255,0.5) 1px,
+            transparent 1.5px
+        );
+
+    background-size:
+        150px 150px,
+        230px 230px,
+        310px 310px;
+
+    background-position:
+        10px 20px,
+        80px 100px,
+        150px 40px;
+
+    opacity: 0.55;
+}
+
+
+/* =========================================================
+   NAVIGATION BAR
+========================================================= */
+
+.navbar {
+
+    height: 76px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    background: rgba(2, 5, 15, 0.85);
+
+    border-bottom:
+        1px solid rgba(90, 120, 190, 0.22);
+
+    backdrop-filter: blur(15px);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+}
+
+
+/* ASTRONIUS LOGO */
+
+.logo {
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 24px;
+
+    font-weight: 900;
+
+    letter-spacing: 5px;
+
+    transition: 0.3s;
+}
+
+
+.logo:hover {
+
+    color: #83a5ff;
+
+    text-shadow:
+        0 0 10px #587cff,
+        0 0 25px #304fff;
+}
+
+
+/* NAV LINKS */
+
+nav {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 26px;
+}
+
+
+nav a {
+
+    color: #8998b8;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.25s;
+
+    position: relative;
+}
+
+
+nav a:hover {
+
+    color: #ffffff;
+
+}
+
+
+nav a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -8px;
+
+    width: 0;
+
+    height: 2px;
+
+    background: #7193ff;
+
+    transition: 0.25s;
+}
+
+
+nav a:hover::after {
+
+    width: 100%;
+}
+
+
+/* ACTIVE PAGE */
+
+nav a.active {
+
+    color: #ffffff;
+
+}
+
+
+nav a.active::after {
+
+    width: 100%;
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+main {
+
+    width: min(1180px, 90%);
+
+    margin: auto;
+}
+
+
+/* =========================================================
+   HERO SECTION
+========================================================= */
+
+.hero {
+
+    text-align: center;
+
+    padding:
+        100px
+        10px
+        65px;
+}
+
+
+/* SMALL TOP LABEL */
+
+.eyebrow {
+
+    color: #7087ba;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 20px;
+
+    text-transform: uppercase;
+}
+
+
+/* MAIN TITLE */
+
+.hero h1 {
+
+    font-size:
+        clamp(50px, 9vw, 100px);
+
+    font-weight: 900;
+
+    letter-spacing: 10px;
+
+    line-height: 0.95;
+
+    color: #ffffff;
+
+    text-shadow:
+        0 0 15px rgba(110, 145, 255, 0.2);
+}
+
+
+/* BLUE WORD */
+
+.hero h1 span {
+
+    color: #789cff;
+
+    text-shadow:
+        0 0 20px rgba(80, 120, 255, 0.4);
+}
+
+
+/* HERO DESCRIPTION */
+
+.hero > p:not(.eyebrow) {
+
+    max-width: 650px;
+
+    margin:
+        28px auto
+        30px;
+
+    color: #9daac5;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   LANGUAGE PILLS
+========================================================= */
+
+.language-pills {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+}
+
+
+.language-pills span {
+
+    padding:
+        9px
+        17px;
+
+    border-radius: 999px;
+
+    border:
+        1px solid #27385e;
+
+    background:
+        rgba(10, 17, 36, 0.8);
+
+    color: #cbd7f3;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+
+.language-pills span:hover {
+
+    border-color: #6f8fff;
+
+    color: #ffffff;
+
+    box-shadow:
+        0 0 18px rgba(83, 116, 255, 0.25);
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   CODE CARD GRID
+========================================================= */
+
+.lab-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 22px;
+}
+
+
+/* =========================================================
+   CODE CARDS
+========================================================= */
+
+.code-card {
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(11, 18, 38, 0.96),
+            rgba(5, 9, 20, 0.96)
+        );
+
+    border:
+        1px solid rgba(53, 72, 113, 0.55);
+
+    border-radius: 18px;
+
+    padding: 25px;
+
+    box-shadow:
+        0 18px 60px rgba(0, 0, 0, 0.3);
+
+    transition:
+        transform 0.3s,
+        border-color 0.3s,
+        box-shadow 0.3s;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* TOP GLOW */
+
+.code-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    right: 0;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #6687ff,
+            transparent
+        );
+
+    opacity: 0.7;
+}
+
+
+.code-card:hover {
+
+    transform: translateY(-6px);
+
+    border-color:
+        rgba(103, 135, 220, 0.7);
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.45),
+        0 0 30px rgba(75, 105, 210, 0.08);
+}
+
+
+/* =========================================================
+   CARD HEADER
+========================================================= */
+
+.card-top {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 14px;
+}
+
+
+.card-top h2 {
+
+    font-size: 22px;
+
+    color: #ffffff;
+}
+
+
+.card-top small {
+
+    margin-left: auto;
+
+    color: #60749b;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   LANGUAGE DOTS
+========================================================= */
+
+.dot {
+
+    width: 11px;
+
+    height: 11px;
+
+    border-radius: 50%;
+
+    display: block;
+
+    box-shadow:
+        0 0 10px currentColor;
+}
+
+
+.cpp {
+
+    background: #5e8cff;
+
+    color: #5e8cff;
+}
+
+
+.java {
+
+    background: #ff8b68;
+
+    color: #ff8b68;
+}
+
+
+.node {
+
+    background: #83c75c;
+
+    color: #83c75c;
+}
+
+
+.php {
+
+    background: #a58cff;
+
+    color: #a58cff;
+}
+
+
+/* =========================================================
+   CARD DESCRIPTION
+========================================================= */
+
+.code-card > p {
+
+    color: #8796b4;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================================================
+   CODE BLOCK
+========================================================= */
+
+pre {
+
+    background:
+        #02040a;
+
+    border:
+        1px solid #151f35;
+
+    border-radius: 12px;
+
+    padding: 19px;
+
+    overflow-x: auto;
+
+    box-shadow:
+        inset 0 0 25px rgba(0, 0, 0, 0.45);
+}
+
+
+/* CODE TEXT */
+
+pre code {
+
+    color: #cbd7f3;
+
+    font-family:
+        Consolas,
+        "Courier New",
+        monospace;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    white-space: pre;
+}
+
+
+/* =========================================================
+   TERMINAL
+========================================================= */
+
+.terminal {
+
+    margin:
+        75px
+        0
+        60px;
+
+    background:
+        #02040a;
+
+    border:
+        1px solid #1d2b49;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 25px 80px rgba(0, 0, 0, 0.4);
+
+    position: relative;
+}
+
+
+/* TERMINAL HEADER */
+
+.terminal-head {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding:
+        15px
+        20px;
+
+    background:
+        #0a1020;
+
+    border-bottom:
+        1px solid #18243b;
+
+    color: #7185aa;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+}
+
+
+/* TERMINAL DOTS */
+
+.terminal-head span {
+
+    color: #70809f;
+
+    letter-spacing: 3px;
+}
+
+
+/* TERMINAL OUTPUT */
+
+#terminalOutput {
+
+    padding: 26px;
+
+    min-height: 180px;
+
+    font-family:
+        Consolas,
+        "Courier New",
+        monospace;
+
+    font-size: 14px;
+
+    line-height: 2;
+
+    color: #8191b1;
+}
+
+
+/* TERMINAL SUCCESS */
+
+#terminalOutput .success {
+
+    color: #7ed99a;
+
+    text-shadow:
+        0 0 8px rgba(80, 220, 130, 0.25);
+}
+
+
+/* =========================================================
+   RUN BUTTON
+========================================================= */
+
+button {
+
+    margin:
+        0
+        25px
+        25px;
+
+    padding:
+        13px
+        21px;
+
+    border:
+        1px solid #708cff;
+
+    border-radius: 8px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #4e6de5,
+            #637ff3
+        );
+
+    color: #ffffff;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.5px;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+
+    box-shadow:
+        0 8px 25px rgba(67, 94, 210, 0.25);
+}
+
+
+button:hover {
+
+    transform: translateY(-2px);
+
+    background:
+        linear-gradient(
+            135deg,
+            #617ff2,
+            #7691ff
+        );
+
+    box-shadow:
+        0 12px 35px rgba(67, 94, 210, 0.4);
+}
+
+
+button:active {
+
+    transform: translateY(1px);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+
+    text-align: center;
+
+    padding:
+        30px
+        20px;
+
+    border-top:
+        1px solid #121b30;
+
+    color: #566681;
+
+    font-size: 12px;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+::-webkit-scrollbar {
+
+    width: 9px;
+
+}
+
+
+::-webkit-scrollbar-track {
+
+    background: #02040a;
+
+}
+
+
+::-webkit-scrollbar-thumb {
+
+    background: #26385e;
+
+    border-radius: 10px;
+
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+
+    background: #405b91;
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .navbar {
+
+        padding:
+            0
+            4%;
+
+    }
+
+
+    .logo {
+
+        font-size: 19px;
+
+        letter-spacing: 3px;
+
+    }
+
+
+    nav {
+
+        gap: 11px;
+
+    }
+
+
+    nav a {
+
+        font-size: 11px;
+
+    }
+
+
+    .hero {
+
+        padding-top: 70px;
+
+    }
+
+
+    .hero h1 {
+
+        letter-spacing: 5px;
+
+    }
+
+
+    .lab-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .card-top small {
+
+        display: none;
+
+    }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 520px) {
+
+    .navbar {
+
+        height: auto;
+
+        padding:
+            18px
+            5%;
+
+        flex-direction: column;
+
+        gap: 18px;
+
+    }
+
+
+    nav {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+    }
+
+
+    .hero {
+
+        padding:
+            60px
+            5px
+            45px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 45px;
+
+        letter-spacing: 3px;
+
+    }
+
+
+    .hero > p:not(.eyebrow) {
+
+        font-size: 15px;
+
+    }
+
+
+    .code-card {
+
+        padding: 18px;
+
+    }
+
+
+    pre {
+
+        padding: 14px;
+
+    }
+
+
+    pre code {
+
+        font-size: 11px;
+
+    }
+
+
+    .terminal-head {
+
+        font-size: 10px;
+
+    }
+
+
+    #terminalOutput {
+
+        font-size: 12px;
+
+        padding: 20px;
+
+    }
+
+}
